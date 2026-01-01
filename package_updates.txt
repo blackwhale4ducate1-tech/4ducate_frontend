@@ -1,0 +1,30 @@
+# Required Package Updates for Tailwind CSS Implementation
+
+## Install these dependencies:
+
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/forms @tailwindcss/typography
+
+npm install react-icons
+
+## Your package.json should include:
+
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10"
+  },
+  "dependencies": {
+    "react-icons": "^5.0.1"
+  }
+}
+
+## After installation, run:
+npm run dev
+
+## To verify Tailwind is working:
+- Check browser console for no errors
+- Dark mode toggle should work
+- Tailwind classes should apply styles

@@ -1,0 +1,289 @@
+/* Challenges Container with Glassmorphism */
+.challenges-container {
+  padding: 32px; /* Increased padding for more spacious feel */
+  background: linear-gradient(135deg, rgba(26, 30, 46, 0.95), rgba(42, 46, 69, 0.95));
+  border-radius: 20px; /* Slightly larger border-radius for elegance */
+  width: 100%;
+  max-width: 1400px; /* Increased max-width to accommodate more challenges */
+  margin: 32px auto; /* Increased margin for better centering */
+  min-height: calc(100vh - 64px); /* Ensure container takes most of viewport height */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Added gap for better internal spacing */
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px; /* Increased margin for better separation */
+}
+
+.header h2 {
+  font-size: 28px; /* Slightly larger for prominence */
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px; /* Slightly larger search bar */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.search-bar input {
+  padding: 12px 16px; /* Increased padding */
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 15px;
+  color: #ffffff;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-btn {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Challenges List */
+.challenges-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Increased min-width for larger cards */
+  gap: 20px; /* Increased gap for better spacing */
+  flex-grow: 1; /* Allows list to expand with container */
+}
+
+/* Challenge Card */
+.challenge-card {
+  display: fascia;
+  align-items: center;
+  padding: 20px; /* Increased padding */
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.challenge-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-icon {
+  margin-right: 20px; /* Increased margin */
+  flex-shrink: 0;
+}
+
+.icon-circle {
+  width: 52px; /* Slightly larger icon */
+  height: 52px;
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-info {
+  flex-grow: 1;
+  margin-right: 20px;
+  min-width: 0;
+}
+
+.challenge-title {
+  font-size: 20px; /* Slightly larger title */
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.challenge-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.challenge-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.challenge-status {
+  padding: 8px 16px; /* Increased padding */
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.status-done {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.status-progress {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.status-start {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.challenge-btn {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Increased padding */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .challenges-container {
+    padding: 24px;
+    margin: 24px;
+    min-height: calc(100vh - 48px);
+  }
+
+  .header h2 {
+    font-size: 24px;
+  }
+
+  .search-bar {
+    max-width: 350px;
+  }
+
+  .challenges-list {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .challenges-container {
+    margin: 16px;
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .challenges-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .challenges-container {
+    padding: 16px;
+    margin: 12px;
+  }
+
+  .challenge-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .challenge-icon {
+    margin-bottom: 16px;
+    margin-right: 0;
+  }
+
+  .challenge-info {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .challenge-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .challenge-title {
+    font-size: 18px;
+  }
+
+  .challenge-description {
+    font-size: 13px;
+  }
+
+  .challenge-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .challenge-status {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}

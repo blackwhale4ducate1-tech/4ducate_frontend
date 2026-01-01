@@ -1,0 +1,480 @@
+/* Ensure full height for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a1e2e 0%, #2a2e45 100%); /* Dark gradient background */
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Profile Home Container */
+.profile-home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Welcome Card */
+.welcome-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for glass effect */
+  backdrop-filter: blur(12px); /* Frosted glass blur */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-text {
+  flex: 1;
+}
+
+.welcome-text h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.welcome-text p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.welcome-text .quote {
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.3px;
+}
+
+.book-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15); /* Glassmorphism for icon container */
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.light-bulb {
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  font-size: 22px;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 200, 0.6));
+  animation: glow 2s ease-in-out infinite;
+}
+
+.book {
+  font-size: 40px;
+  color: #60a5fa; /* Vibrant blue accent */
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Your Courses Section */
+.your-courses h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* AI Banner */
+.ai-banner {
+  background: rgba(96, 165, 250, 0.15); /* Light blue glass effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  min-height: 160px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.banner-content {
+  z-index: 2;
+}
+
+.banner-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.pre-register-btn {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa); /* Blue gradient button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pre-register-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Glassmorphism Navbar */
+.custom-navbar.fixed-bottom {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.3rem 0;
+  border-radius: 12px 12px 0 0;
+  height: 50px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.nav-link i {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover i {
+  color: #60a5fa;
+  filter: drop-shadow(0 0 3px rgba(96, 165, 250, 0.5));
+  transform: translateY(-2px);
+}
+
+.nav-text {
+  font-size: 0.65rem;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+.nav-link:hover .nav-text {
+  opacity: 1;
+  transform: translateY(1px);
+}
+
+.nav-link.active {
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+.nav-link.active i {
+  color: #60a5fa;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+  transform: translateY(-2px);
+}
+
+.nav-link.active:hover i {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+}
+
+.nav-link.active .nav-text {
+  opacity: 1;
+  transform: translateY(1px);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #ffffff, #60a5fa);
+  background-size: 200% 100%;
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 0 6px rgba(96, 165, 250, 0.5);
+  animation: gradientMove 2s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Desktop Buttons */
+.desktop-buttons {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+}
+
+.btn {
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.login-btn {
+  background: linear-gradient(45deg, #5c636a, #6c757d);
+}
+
+.login-btn:hover {
+  background: linear-gradient(45deg, #5c636a, #7d8590);
+}
+
+.join-btn {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+}
+
+.join-btn:hover {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  min-width: 100px;
+}
+
+.mobile-login-btn, .mobile-join-btn {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .profile-home {
+    padding: 12px;
+  }
+
+  .welcome-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .welcome-text {
+    margin-bottom: 16px;
+  }
+
+  .welcome-text h2 {
+    font-size: 22px;
+  }
+
+  .welcome-text p {
+    font-size: 13px;
+  }
+
+  .welcome-text .quote {
+    font-size: 12px;
+  }
+
+  .book-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .light-bulb {
+    font-size: 18px;
+    top: -12px;
+  }
+
+  .book {
+    font-size: 32px;
+  }
+
+  .your-courses h3 {
+    font-size: 18px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-banner {
+    min-height: 140px;
+    padding: 16px;
+  }
+
+  .banner-content h2 {
+    font-size: 20px;
+  }
+
+  .pre-register-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .coming-soon {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .custom-navbar.fixed-bottom {
+    height: 45px;
+    padding: 0.2rem 0;
+  }
+
+  .nav-link i {
+    font-size: 1.1rem;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .desktop-buttons {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-link.active::after {
+    width: 30%;
+  }
+}

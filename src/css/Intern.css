@@ -1,0 +1,154 @@
+/* Intern.css */
+.intern-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .search-bar input {
+    padding: 8px 12px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .search-btn {
+    background-color: #5046e5;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tab-btn.active {
+    background-color: #5046e5;
+    color: white;
+  }
+  
+  .tab-btn:hover:not(.active) {
+    background-color: #e9ecef;
+  }
+  
+  .intern-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .intern-item {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .intern-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .intern-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .intern-requirements {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .intern-btn {
+    background-color: #5046e5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .intern-btn:hover {
+    background-color: #3f37b3;
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 992px) {
+    .intern-container {
+      padding: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .search-bar {
+      margin-top: 10px;
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    .tabs {
+      width: 100%;
+    }
+    
+    .tab-btn {
+      flex: 1;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .tabs {
+      flex-direction: column;
+    }
+    
+    .tab-btn {
+      width: 100%;
+      text-align: left;
+    }
+    
+    .intern-item {
+      padding: 12px;
+    }
+  }
